@@ -1,0 +1,25 @@
+
+{{ void(this.beginBlock('content')) }}
+
+	{{ set(this, 'title', _Blog.getBlogTitle()) }}
+	{% set limit = 20 %}
+	{% set articlesArr = _Blog.getBlogFeed({'limit': limit, 'offset': 0}) %}
+	{% set articles = articlesArr.articles %}
+
+    <div class="layout-container">
+        <div class="home">
+            {% if articles|length > 0 %}
+                 {% include 'layouts/elements/_card-layout-home.twig' with {articles: articles} %}
+            {% endif %}
+        </div>
+    </div>
+
+
+		{% if articles|length >= limit %}
+        <div class="section__content">
+            <div class="row ajaxArticles" data-existing-nonpinned-count="{{articlesArr.existingNonPinnedCount}}"></div>
+            <a class="section__link loadMoreArticles" href="#">Load more <i class="fa fa-refresh"></i></a>
+        </div>
+    {% endif %}
+		<textarea>{{dump(articles)}}</textarea>
+{{ void(this.endBlock()) }}

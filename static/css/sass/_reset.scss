@@ -1,0 +1,124 @@
+:focus {
+  outline: none;
+}
+::selection {
+  background: $highlight-color;
+  color: $light-color;
+}
+::-moz-selection {
+  background: $highlight-color;
+  color: $light-color;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: $placeholder;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $placeholder;
+  opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: $placeholder;
+  opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $placeholder;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: $placeholder;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: $body-color;
+  color: $body-text;
+  font-family: $base-font-family;
+  font-size: 14px;
+  line-height: 24px;
+  &::before {
+    height: 700px;
+    width: 100%;
+    display: block;
+    content: '';
+    opacity: 0.2;
+    position: absolute;
+    top: 586px;
+    background-image: linear-gradient(to bottom, rgba(237, 237, 237, 0.0), #d8d8d8 40%, #989fa3 56%, #d8d8d8 69%, rgba(215, 215, 215, 0.0));
+  }
+}
+
+h1 {
+  @include text-lg($color: $body-text);
+
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  font-size: 12px;
+}
+
+p {
+  font-family: $text-font-family;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+a {
+  color: $dark-color;
+  text-decoration: none;
+  outline: none;
+  transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+  border: none;
+}
+a:hover, a:focus, a:active {
+  color: $hover-color;
+  text-decoration: none!important;
+  transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset, img {
+  border: 0;
+}
+ol, ul {
+  list-style: none;
+}
+caption, th {
+  text-align: left;
+}
+
+.img__full {
+  display: block;
+  height: auto;
+  margin: 0px auto 40px;
+  width: 100%;
+  @include desktop-sm {
+    width: $screen-md;
+  }
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}

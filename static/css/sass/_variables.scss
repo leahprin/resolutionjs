@@ -1,0 +1,106 @@
+$light-color:       #fff;
+$gray-color:        #ebebeb;
+$dark-color:        #000000;
+$grey:			    #808080;
+$body-text:         #888;
+$article-body-text: #4a4a4a;
+$heading-text:       #000;
+$header-background: #181818;
+$nav-text:          #fff;
+$body-color:        rgb(255, 255, 255);
+$icon-color:        #fff;
+
+$highlight-color:   #fed084;
+$quote-color:       #662d91;
+$hover-color:       $highlight-color;
+$follow-color:      #00a651;
+$hashtag-color:     #55acee;
+$slide-color:       #0076a3;
+$blue:              #46a5fc;
+$transparent:       rgba(0,0,0,0);
+$border-color:      #e0e0e0;
+$placeholder:       rgba(255, 255, 255, 0.8);
+
+$error-color:       #e73d4a;
+$success-color:     #4FE8C4;
+$warning:           #fecd50;
+$black:             #000000;
+$white:             #ffffff;
+
+$sections: (
+        0:    (
+                color: #7bc7a0,
+        ),
+        1: (
+                color: #f8978e,
+        ),
+        2:        (
+                color: #55acee,
+        ),
+        3:         (
+                color: #fed084,
+        ),
+        4:     (
+                color: #FDC3C2,
+        ),
+        5:    (
+                color: #7bc7a0,
+        ),
+        6: (
+                color: #f8978e,
+        ),
+        7:        (
+                color: #55acee,
+        ),
+        8:         (
+                color: #fed084,
+        ),
+        9:     (
+                color: #FDC3C2,
+        ),
+        10:    (
+                color: #7bc7a0,
+        ),
+        11: (
+                color: #f8978e,
+        ),
+        12:        (
+                color: #55acee,
+        ),
+        13:         (
+                color: #fed084,
+        ),
+        14:     (
+                color: #FDC3C2,
+        )
+);
+
+$social-colors: (
+        facebook:    #3b5998,
+        featured:    #15b999,
+        google-plus: #e04a32,
+        instagram:   #9f6fc0,
+        linkedin:    #123e65,
+        twitter:     #55acee,
+        youtube:     #cc181e,
+        vimeo:       #00b3ec,
+);
+
+// Grids
+$grid-gutter-width: 20px;
+
+// Dimensions
+$screen-xs: 480px;  // Mobile
+$screen-sm: 768px;  // Tablet
+$screen-md: 1200px; // Desktop
+$screen-lg: 1600px; // Large desktop
+
+// Font
+$heading-font-family: "Playfair", Helvetica, Arial, sans-serif !default;
+$base-font-family:  	"Raleway", Helvetica, Arial, sans-serif !default;
+$text-font-family: 	"Raleway", Helvetica, Arial, sans-serif !default;
+$iconfont:				FontAwesome !default;
+
+// Font Size
+$baseFontSize:			16px; /* ($baseFontSize * 1) + 0px; */
+$center:				center;

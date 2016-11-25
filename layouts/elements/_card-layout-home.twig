@@ -1,0 +1,90 @@
+    <div class="card-container">
+        {% if articles[0] is defined %}
+            <div class="card__outset-wrap--bottom card-container">
+                <div class="col-full">
+                    {% include 'layouts/elements/card.twig' with {article: articles[0]} %}
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="card__inset-wrap card-container">
+            {% if articles[1] is defined %}
+                <div class="col-third">
+                    {% include 'layouts/elements/card.twig' with {article: articles[1]} %}
+                </div>
+            {% endif %}
+            {% if articles[2] is defined %}
+                <div class="col-third">
+                    {% include 'layouts/elements/card.twig' with {article: articles[2]} %}
+                </div>
+            {% endif %}
+            {% if articles[3] is defined %}
+                <div class="col-third">
+                    {% include 'layouts/elements/card.twig' with {article: articles[4]} %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="card__outset-wrap--top card-container">
+            {% if articles[4] is defined %}
+                <div class="col-half">
+                    {% include 'layouts/elements/card.twig' with {article: articles[4]} %}
+                </div>
+            {% endif %}
+            {% if articles[5] is defined %}
+                <div class="col-half">
+                    {% include 'layouts/elements/card.twig' with {article: articles[5]} %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="email-form">
+        <h1 class="email-form__heading">Get an unfair advantage</h1>
+        <div class="email-form__sub-heading">The best from The Resolution, delivered to your inbox every month.</div>
+        <form class="newsletter-form" action="">
+            <input type="text" class="header__search-text" placeholder="Email" name="s" value="">
+            <button class="email__form-btn">Sign Up <i class="fa fa-envelope"></i></button>
+        </form>
+    </div>
+
+    <div class="card-container">
+        <div class="card__inset-wrap card-container">
+            {% if articles[6] is defined %}
+                <div class="col-third">
+                    {% include 'layouts/elements/card.twig' with {article: articles[6]} %}
+                </div>
+            {% endif %}
+            {% if articles[7] is defined %}
+                <div class="col-third">
+                    {% include 'layouts/elements/card.twig' with {article: articles[7]} %}
+                </div>
+            {% endif %}
+            {% if articles[8] is defined and articles[9] is defined and articles[10] is defined %}
+                <div class="col-third-container">
+                    <div class="col-third">
+                        {% include 'layouts/elements/card.twig' with {article: articles[8]} %}
+                    </div>
+                    <div class="col-third">
+                        {% include 'layouts/elements/card.twig' with {article: articles[9]} %}
+                    </div>
+                    <div class="col-third">
+                        {% include 'layouts/elements/card.twig' with {article: articles[10]} %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <div class="card__outset-wrap--top card-container card__outset-wrap--special">
+            {% if articles[11] is defined %}
+                <div class="col-half">
+                    {% include 'layouts/elements/card.twig' with {article: articles[11]} %}
+                </div>
+            {% endif %}
+            {% if articles[12] is defined %}
+                <div class="col-half">
+                    {% include 'layouts/elements/card.twig' with {article: articles[12]} %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="card__outset-wrap--bottom"></div>
+    </div>
+    {% include 'layouts/elements/deloit-banner.twig' | raw %}
